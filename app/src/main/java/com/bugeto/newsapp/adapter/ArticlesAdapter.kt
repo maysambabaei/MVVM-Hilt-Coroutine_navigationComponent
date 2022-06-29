@@ -25,7 +25,7 @@ class ArticlesAdapter(private val listener: OnItemClickListener): ListAdapter<Ar
         init {
             binding.apply {
                 root.setOnClickListener {
-                    val position = adapterPosition
+                    val position = absoluteAdapterPosition
                     if(position != RecyclerView.NO_POSITION){
                         val article = getItem(position)
                         listener.onItemClick(article)
